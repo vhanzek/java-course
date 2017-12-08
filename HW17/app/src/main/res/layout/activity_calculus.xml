@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="hr.fer.android.jmbag0036482927.CalculusActivity">
+
+    <TextView
+        android:id="@+id/tvDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="@string/desc"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/btnCalculate"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:text="@string/calc"
+        android:textColor="#FFFFFF"
+        android:background="@color/colorPrimary"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:id="@+id/etFirstNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:textAlignment="center"
+        android:layout_marginTop="30dp"
+        android:fontFamily="sans-serif-condensed"
+        android:hint="@string/first"
+        android:backgroundTint="@color/colorPrimary"
+        android:textCursorDrawable="@null"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:id="@+id/etSecondNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:textAlignment="center"
+        android:fontFamily="sans-serif-condensed"
+        android:hint="@string/second"
+        android:backgroundTint="@color/colorPrimary"
+        android:textCursorDrawable="@null"
+        android:layout_below="@+id/etFirstNumber"
+        android:layout_alignStart="@+id/etFirstNumber" />
+
+    <RadioGroup
+        android:id="@+id/rgOperation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etSecondNumber"
+        android:orientation="horizontal"
+        android:paddingTop="30dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="17dp"
+        android:fontFamily="sans-serif-condensed"
+        android:layout_alignStart="@+id/etSecondNumber"
+        android:layout_alignEnd="@+id/etSecondNumber">
+
+        <RadioButton
+            android:id="@+id/rbSum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:buttonTint="@color/colorPrimary"/>
+
+        <RadioButton
+            android:id="@+id/rbSub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:buttonTint="@color/colorPrimary"/>
+
+        <RadioButton
+            android:id="@+id/rbMul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="*"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:buttonTint="@color/colorPrimary"/>
+
+        <RadioButton
+            android:id="@+id/rbDiv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:buttonTint="@color/colorPrimary"/>
+
+    </RadioGroup>
+
+
+</RelativeLayout>

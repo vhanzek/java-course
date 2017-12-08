@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Calculus Application</string>
+    <string name="message">Message</string>
+    <string name="ok">OK</string>
+    <string name="report">Send report</string>
+    <string name="calc">Calculate</string>
+    <string name="first">First number</string>
+    <string name="second">Second number</string>
+    <string name="desc">Enter two numbers and pick operation.</string>
+    <string name="jmbag">0036482927</string>
+</resources>

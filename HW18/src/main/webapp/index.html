@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Welcome</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script type="text/javascript" src="js/htmlescaping.js"></script>
+	<script type="text/javascript">
+	<!--
+		$(document).ready (function (){
+			$.ajax(
+			{
+				url: "tags",
+				dataType: "json",
+				type: "GET",
+				success: function(data) {
+					var tags = data; 
+					var html = "";
+					if(tags.length == 0) {
+						html = "There are no available tags."
+					} else {
+						for(var i=0; i < tags.length; i++) {
+							html += "<input type=\"button\" value=\"" + htmlEscape(tags[i]) +"\" ";
+							html += "onclick=\"tagClicked('" + htmlEscape(tags[i]) + "')\">";
+						}
+					}
+					$("#tags").html(html);
+				}
+			});
+		});
+	
+		function tagClicked(tag) {
+			$.ajax(
+			{
+				url: "pictures",
+				data: {
+					tag: tag
+				},
+				dataType: "json",
+				type: "GET",
+				success: function(data) {
+					var picNames = data; 
+					var html = "";
+					if(picNames.length == 0) {
+						html = "There are no available pictures for " + tag + " tag.";
+					} else {
+						for(var i = 0; i < picNames.length; i++) {
+							html += "<input type=\"image\" " +
+									"src=\"/galerija/thumbnail?name=" + htmlEscape(picNames[i]) + "\" " +
+									"onclick=\"imageClicked('" + htmlEscape(picNames[i])+ "')\"/>";
+						}
+					}
+					
+					imageClicked(picNames[0]);
+					$("#gallery").html(html);
+				}
+			});
+		}
+		
+		function imageClicked(name){
+			$.ajax(
+			{
+				url: "picture-info",
+				data: {
+					name: name
+				},
+				dataType: "json",
+				type: "GET",
+				success: function(data) {
+					var pic = data; 
+					var html = "";
+					if(pic.length == 0) {
+						html = "There is no image with '" + name + "' name.";
+					} else {
+						html += "<img src=\"/galerija/picture?name=" + htmlEscape(name) +
+								"\" height=\"600\" width=\"600\"/><br>";
+						html += "<div id=\"imgName\">" + htmlEscape(pic.description) + "</div>";
+						html += "Tags: ";
+						for(var i = 0; i < pic.tags.length; i++) {
+							html += "<input type=\"button\" value=\"" + htmlEscape(pic.tags[i]) +"\" ";
+							html += "onclick=\"tagClicked('" + htmlEscape(pic.tags[i]) + "')\">";
+						}
+					}
+					
+					$("#picture").html(html);
+				}
+			});
+		}
+		//-->
+		</script>
+	
+</head>
+<body>
+	<div class="container">
+		<h1>Choose picture tag</h1>
+		<div class="tag">
+			<div id="tags">&nbsp;</div>
+		</div>
+	</div>
+	<div class="container">
+		<div id="gallery">&nbsp;</div>
+		<div id="picture">&nbsp;</div>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,5 @@
+		load r7, @broj 	; ucitaj poruku u r7
+		echo [r7] 			; ispisi na konzolu poruku
+		halt 				; zaustavi procesor
+@broj: DEFINT 4
+@poruka: DEFSTR "Hello world!\n"

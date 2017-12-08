@@ -1,0 +1,63 @@
+			load r14, @poruka
+			echo r14
+@poc:		input @input		
+			load r0, @input		
+			push r0				
+			call @fib			
+			pop r1				
+			echo r1				
+			halt				
+						
+@fib:		pop r3				
+			pop r0				
+			push r3				
+				
+			load r1, @jedan		
+			testEquals r0, r1	
+			jumpIfTrue @kraj	
+					
+			load r1, @nula	
+			testEquals r0, r1	
+			jumpIfTrue @kraj	
+			
+			push r0				
+			
+			decrement r0
+			push r0 			
+	
+			call @fib			
+			
+			pop r1				
+			pop r0				
+			push r1				
+			push r0				
+			
+			decrement r0		
+			decrement r0 		
+			push r0				
+			
+			call @fib			
+			
+			pop r1				
+			pop r0				
+			pop r2				
+			
+			add r1, r1, r2		
+			pop r3				
+			push r1				
+			push r3				
+			ret					
+			
+@kraj:		load r1, @jedan		
+			pop r3				
+			push r1				
+			push r3				
+			ret					
+
+@poruka:	DEFSTR "Unesite broj za koji želite izračunati Fibonnacija: "	
+@input:		DEFINT 0	
+@nula:		DEFINT 0	
+@jedan:		DEFINT 1	
+	
+			RESERVE:100
+@stackTop:	RESERVE

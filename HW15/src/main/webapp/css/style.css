@@ -1,0 +1,65 @@
+@CHARSET "UTF-8";
+
+.container {
+	border: 2px solid #ccc;
+	border-radius: 5px;
+	padding-left: 10px;
+	padding-bottom: 5px;
+	margin-bottom: 10px;
+}
+
+input,textarea {
+	padding: 5px;
+	border: 2px solid #ccc;
+	border-radius: 5px;
+	margin-bottom: 3px;
+}
+		
+input[type=submit] {
+	padding: 5px 15px;
+	background: #ccc;
+	border: 0 none;
+	cursor: pointer;
+	border-radius: 5px;
+	margin-top: 7px;
+}
+
+input[type=submit]:hover{
+	color: white;
+	background-color: #595959;
+}
+
+.header {
+	border-bottom: 2px solid #ccc;
+	padding-bottom: 5px;
+	margin-bottom: 5px;
+}
+.error {
+	color: #FF0000;
+	padding-bottom: 5px;
+}
+.smalltext { font-size: small; }
+
+p.entry {
+	width: 40%;
+}
+
+a:visited { color: navy; }
+a:link { text-decoration: none; }
+a:hover { color: red; }
+
+a.button {
+    appearance: button;
+    text-decoration: none;
+    color: initial;
+    padding: 5px 15px;
+	background: #ccc;
+	border: 0 none;
+	cursor: pointer;
+	border-radius: 5px;
+}
+
+a.button:hover{
+	color: white;
+	background-color: #595959;
+}

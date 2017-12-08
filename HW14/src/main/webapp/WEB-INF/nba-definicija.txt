@@ -1,0 +1,7 @@
+1	Cleveland Cavaliers	http://www.nba.com/cavaliers/
+2	Golden State Warriors	http://www.nba.com/warriors/
+3	San Antonio Spurs	http://www.nba.com/spurs/
+4	Oklahoma Thunder	http://www.nba.com/thunder/
+5	Toronto Raptors	http://www.nba.com/raptors/
+6	Boston Celtics	http://www.nba.com/celtics/
+7	Los Angeles Clippers	http://www.nba.com/clippers/

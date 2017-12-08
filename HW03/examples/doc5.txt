@@ -1,0 +1,9 @@
+This is s \{$for 1 1 1$} ample text.
+Joe "Long" Smith" \\ "Joe "Long" Smith""
+{$ FoR i 1 2 					$}
+This isdfs \{$= i a$}-th time this{$ FoR asdfi 1 2 1$}message is generated.
+{$eND$}
+{$eND$}
+{$FOR iasdf_456 0 10 7$}
+sin({$=i asdf sadf $}^2) = {$=jesus i-i 1.0 @sin "0.000" "das \" das" @decfmt $}
+{$eND$}
